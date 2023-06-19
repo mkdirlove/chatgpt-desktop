@@ -11,7 +11,7 @@ Go to release page or click
 [Download.](https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64)
 
 ### Linux Installation
-Manual package installation
+Manual package installation or [Download Here.](https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64.deb)
 ```
 curl -O chatgpt.deb https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64.deb
 ```
@@ -23,8 +23,10 @@ sudo chmod +x /usr/bin/
 ```
 Manually fix the execute permission.
 ```
-sudo chmod +x /usr/bin/chatgpt-desktop_x64.deb
+sudo chmod +x /usr/bin/chatgpt-desktop
 ```
+
+### Preview
 
 ### ToDo
 ```
