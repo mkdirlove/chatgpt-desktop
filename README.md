@@ -7,9 +7,7 @@
 </h1>
 
 ### Windows Installation
-Go to release page or click download.
-https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64
-[Download the extension directly.](https://s3.amazonaws.com/markdown-here/markdown-here.safariextz) When it has finished downloading, double click it to install.
-
+Go to release page or click
+[Download.](https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64)
 
 ### Linux Installation
