@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/chatgpt-desktop
+Name=ChatGPT Desktop
+Icon=/usr/share/icons/icon.png
+Terminal=false
+Categories=Programming;
