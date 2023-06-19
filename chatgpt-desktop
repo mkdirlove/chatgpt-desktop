@@ -1,7 +1,10 @@
 import sys
-from PyQt5.QtWidgets import QApplication
+import requests
+from PyQt5.QtWidgets import QApplication, QSplashScreen
 from PyQt5.QtWebEngineWidgets import QWebEngineView
-from PyQt5.QtCore import QUrl
+from PyQt5.QtCore import QUrl, QTimer, Qt
+from PyQt5.QtGui import QPixmap
+from io import BytesIO
 
 class MainWindow(QWebEngineView):
     def __init__(self, url):
@@ -29,12 +32,33 @@ def main():
     # Create an application object
     app = QApplication(sys.argv)
 
+    # Get the image from the URL
+    response = requests.get('https://raw.githubusercontent.com/mkdirlove/chatgpt-desktop/main/icon.png')
+    image_bytes = BytesIO(response.content)
+
+    # Create a QPixmap object with the path to your splash image
+    splash_pix = QPixmap()
+    splash_pix.loadFromData(image_bytes.getvalue())
+
+    # Resize the QPixmap
+    splash_pix = splash_pix.scaled(300, 300, Qt.IgnoreAspectRatio)
+
+    # Create a QSplashScreen object and pass it the QPixmap object
+    splash = QSplashScreen(splash_pix)
+    
+    # Display the splash screen
+    splash.show()
+
     # URL to display
     url = "https://chat.openai.com"
 
-    # Create and show the main window
+    # Create the main window but do not show it yet
     mainWin = MainWindow(url)
-    mainWin.show()
+
+    # Use QTimer to control the duration the splash screen is shown
+    # and show the main window when the splash screen is closed
+    QTimer.singleShot(3000, splash.close)
+    QTimer.singleShot(3000, mainWin.show) # 3000 milliseconds = 3 seconds
 
     # Execute the application
     sys.exit(app.exec_())
