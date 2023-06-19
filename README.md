@@ -39,7 +39,7 @@ pyinstaller --onefile chatgpt-desktop
 ```
 
 Go to release page or click
-[Download.](https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64)
+[Download Here.](https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64)
 
 ### Linux Installation
 Manual package installation or [Download Here.](https://github.com/mkdirlove/chatgpt-desktop/releases/download/v1.0.0/chatgpt-desktop_x64.deb)
