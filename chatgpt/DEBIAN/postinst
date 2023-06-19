@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Assuming mypackage.desktop is installed to /usr/share/applications
+desktop_file="/usr/share/applications/chatgpt-desktop.desktop"
+
+# Write out the .desktop file
+echo "[Desktop Entry]
+Type=Application
+Exec=/usr/bin/chatgpt-desktop
+Name=ChatGPT Desktop
+Icon=/usr/share/icons/icon.png
+Terminal=false
+Categories=Programming;" > $desktop_file
+
+set -e
+
+wget -O /usr/share/icons/hicolor/256x256/apps/chatgpt-icon.png "https://raw.githubusercontent.com/mkdirlove/chatgpt-desktop/main/icon.png"
+gtk-update-icon-cache /usr/share/icons/hicolor/
+
+exit 0
+
+# Copy the desktop file to user's Desktop directory
+cp $desktop_file ~/Desktop
+
+# Make the .desktop file executable
+chmod +x /usr/bin/chatgpt-dektop
+chmod +x ~/Desktop/chatgpt-desktop.desktop
