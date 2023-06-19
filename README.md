@@ -57,6 +57,16 @@ Manually fix the execute permission.
 sudo chmod +x /usr/bin/chatgpt-desktop
 ```
 
+### Building GNU/Linux installation package
+```
+git clone https://github.com/mkdirlove/chatgpt-desktop.git
+```
+```
+cd chatgpt-desktop
+```
+```
+dpkg-deb --build chatgpt
+```
 ### Preview
 https://github.com/mkdirlove/chatgpt-desktop/raw/main/demo.mov
 
